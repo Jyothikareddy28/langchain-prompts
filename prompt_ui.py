@@ -8,6 +8,6 @@ st.header("Research Tool")
 
 user_input = st.text_input("Enter your query:")
 
-if st.button:
-    st.text("Some random text")
-    
+if st.button('Summarize'):
+    result = model.invoke(user_input)
+    st.write(result.content)
